@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="fontFamily">@font/amerika_pro</item>
+
+    </style>
+
+    <style name="PrimaryButton">
+        <item name="backgroundTint">@color/button_color</item>
+        <item name="fontFamily">@font/amerika_pro</item>
+    </style>
+
+    <style name="ToolBarStyle" parent="ThemeOverlay.MaterialComponents.ActionBar">
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="titleTextColor">@android:color/white</item>
+    </style>
+
+    <style name="TextViewStyle" parent="@style/TextAppearance.MaterialComponents.Body1" />
+
+</resources>

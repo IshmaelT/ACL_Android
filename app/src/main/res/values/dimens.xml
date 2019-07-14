@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_vertical">32dp</dimen>
+    <dimen name="margin_vertical_half">16dp</dimen>
+    <dimen name="margin_vertical_quarter">8dp</dimen>
+
+    <dimen name="margin_horizontal">16dp</dimen>
+    <dimen name="margin_horizontal_half">8dp</dimen>
+    <dimen name="divider_profile_width">2dp</dimen>
+</resources>

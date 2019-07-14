@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ALC 4</string>
+    <string name="main_title">Welcome to ALC 4.0</string>
+    <string name="main_button_about_us">About ALC</string>
+    <string name="main_button_my_profile">My Profile</string>
+    <string name="main_toolbar_title">ACL 4 Phase 1</string>
+    <string name="main_about_us_url">https://andela.com/alc/</string>
+    <string name="about_us_toolbar_title">About ALC</string>
+    <string name="profile_toolbar_title">My Profile</string>
+    <string name="profile_item_entry"> %1$s : %2$s </string>
+</resources>
