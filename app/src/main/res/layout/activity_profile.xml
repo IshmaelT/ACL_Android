@@ -6,12 +6,9 @@
     <data>
 
         <variable
-                name="name"
-                type="String"/>
+                name="viewModel"
+                type="example.com.alc4.ProfileViewModel"/>
 
-        <variable
-                name="entries"
-                type="java.util.List"/>
     </data>
 
     <LinearLayout
@@ -64,7 +61,7 @@
                         android:layout_marginEnd="@dimen/margin_horizontal"
                         android:layout_marginRight="@dimen/margin_horizontal"
                         android:gravity="center"
-                        android:text="@{name}"
+                        android:text="@{viewModel.name}"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
@@ -83,8 +80,8 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/text_view_profile"/>
 
-                <LinearLayout
-                        android:id="@+id/linear_layout_profile"
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view_profile"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/margin_horizontal"
@@ -94,8 +91,8 @@
                         android:layout_marginRight="@dimen/margin_horizontal"
                         android:layout_marginBottom="@dimen/margin_vertical_half"
                         android:orientation="vertical"
-                        app:entries="@{entries}"
-                        app:layout="@{@layout/view_profile_item}"
+                        app:entries="@{viewModel.entries}"
+                        app:layout="@{recyclerViewProfile}"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"

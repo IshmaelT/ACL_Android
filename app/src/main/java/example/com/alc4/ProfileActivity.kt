@@ -13,40 +13,24 @@ class ProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        val viewModel = ProfileViewModel()
+
         binding = DataBindingUtil.setContentView(this, R.layout.activity_profile)
+        bind(viewModel)
 
-        binding?.apply {
-            name = "Ishmael Tshikhovhokhovho"
+        viewModel.loadData()
 
-            entries = arrayListOf(
-                ProfileItem(
-                    "Track",
-                    "Android"
-                ),
-                ProfileItem(
-                    "Country",
-                    "South Africa"
-                ),
-                ProfileItem(
-                    "Email",
-                    "ishmael.zt@gmail.com"
-                ),
-                ProfileItem(
-                    "Phone Number",
-                    "0720828312"
-                ),
-                ProfileItem(
-                    "Slack Username",
-                    "@ishmael"
-                )
-            )
-        }
         title = getString(R.string.profile_toolbar_title)
 
         setSupportActionBar(binding?.toolbar)
         supportActionBar?.apply {
             setDisplayHomeAsUpEnabled(true)
         }
+    }
+
+    private fun bind(viewModel: ProfileViewModel) {
+        binding?.setVariable(BR.viewModel, viewModel)
+        binding?.executePendingBindings()
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
